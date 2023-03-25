@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animáció</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+    <div id="mainlap">			
+        <img id="taj" src="img/sky.jpg"/>
+        <img id="taj2" src="img/sky2.jpg"/>	
+        <img id="embor" src="img/normal-plane.png" width="200px">	
+        <img id="embor2" src="img/f14.png" width="200px">											
+     <script type="text/javascript">
+        /* Javascript, deklaráció */
+        var taj=document.getElementById("taj");
+		
+        var szam=0;
+        var szam2=600;
+        var frame=0;			
+        var idozit=0;	
+        var t1;
+        var t2;
+            /* Timer */						
+        t1=setInterval(mozgas,10);						
+                        
+        /* A háttér mozgása */
+        function mozgas()
+        {						
+        szam2--;
+        szam--;
+        taj.style.left=szam+"px";
+        taj2.style.left=szam2+"px";					
+        if(szam<=-600)
+        {
+        szam=600;
+        }
+        if(szam2<=-600)
+        {
+        szam2=600;
+        }
+        }
+        
+    </script>				
+    </div>
+
+
+</body>
+</html>
